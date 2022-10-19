@@ -1,0 +1,57 @@
+.formModalContainer {
+  width: 100%;
+}
+.inputGroup {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.inputGroup input {
+  width: 90%;
+}
+
+.example-full-width {
+  width: 85%;
+}
+
+.buttonFormModal button {
+  width: 40%;
+}
+
+.formModalTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.formModalTitle h2 {
+  padding: 1rem;
+  font-size: clamp(0.5rem, 5vw, 2rem);
+}
+
+.buttonCloseModal {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.buttonFormModal {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.formButtonsModal {
+  width: 100%;
+  display: flex;
+
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.formButtonsModal button {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}

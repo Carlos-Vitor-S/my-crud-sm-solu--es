@@ -1,0 +1,75 @@
+<div class="formModalContainer">
+  <div class="formModalTitle">
+    <h2>Cadastrar Novo Usuario</h2>
+  </div>
+
+  <form [formGroup]="formModal" (ngSubmit)="newUserSubmit()">
+    <div class="inputGroup">
+      <mat-form-field
+        class="example-full-width"
+        appearance="outline"
+        id="input"
+      >
+        <mat-label>Nome</mat-label>
+        <input
+          matInput
+          placeholder="Digite Nome "
+          formControlName="first_name"
+          type="text"
+          required
+        />
+      </mat-form-field>
+    </div>
+    <div class="inputGroup">
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Sobrenome</mat-label>
+        <input
+          matInput
+          placeholder="Digite Sobrenome "
+          formControlName="last_name"
+          type="text"
+          required
+        />
+      </mat-form-field>
+    </div>
+
+    <div class="inputGroup">
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Avatar</mat-label>
+        <input
+          matInput
+          placeholder="Digite link para avatar "
+          formControlName="avatar"
+          type="text"
+          required
+        />
+      </mat-form-field>
+    </div>
+    <div class="inputGroup">
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Email</mat-label>
+        <input
+          matInput
+          placeholder="Digite email "
+          formControlName="email"
+          type="text"
+          required
+        />
+      </mat-form-field>
+    </div>
+
+    <div class="formButtonsModal">
+      <button
+        mat-flat-button
+        color="primary"
+        [disabled]="!formModal.valid"
+        type="submit"
+      >
+        Cadastrar
+      </button>
+      <button mat-flat-button color="warn" type="button" (click)="closeModal()">
+        Fechar
+      </button>
+    </div>
+  </form>
+</div>

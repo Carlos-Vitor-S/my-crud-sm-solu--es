@@ -1,0 +1,26 @@
+* {
+  color: white;
+}
+
+.cardHeader {
+  height: 25%;
+  width: 100%;
+  background-color: #212529;
+  border-radius: 0;
+}
+
+.headerContainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#logoHeaderContainer {
+  margin-right: 1rem;
+}
+
+#logoImg {
+  width: 65px;
+}

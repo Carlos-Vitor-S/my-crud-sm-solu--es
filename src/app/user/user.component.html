@@ -1,0 +1,70 @@
+<mat-card color="primary" class="cardButtons">
+  <div class="containerBtnCadastrar">
+    <span class="TitlesCard">Cadastros Usuarios</span>
+    <span class="TitlesCard">
+      <button mat-flat-button mat-stroked color="raised" (click)="openModal()">
+        + Novo Usuário
+      </button>
+    </span>
+
+    <span class="inputCards">
+      <mat-icon class="icon">search </mat-icon>
+      <input
+        id="inputFilter"
+        placeholder="Search"
+        type="text"
+        required
+        [(ngModel)]="searchText"
+      />
+    </span>
+  </div>
+</mat-card>
+<mat-card class="tableCardContain">
+  <div class="tableContainer">
+    <div class="tableContent">
+      <table class="table table-striped" id="table">
+        <thead class="thead-light" id="tableHeaderContainer">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Avatar</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Sobrenome</th>
+            <th scope="col">Email</th>
+            <th scope="col">Excluir/Edit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of userArray | filter: searchText">
+            <th scope="row">{{ user.id }}</th>
+            <td>
+              <img id="imageTable" src="{{ user.avatar }}" class="me-2" />
+            </td>
+            <td>{{ user.first_name }}</td>
+            <td>{{ user.last_name }}</td>
+            <td>{{ user.email }}</td>
+            <td>
+              <span class="tableButtons">
+                <button
+                  mat-flat-button
+                  color="warn"
+                  (click)="deleteUser(user.id)"
+                >
+                  <mat-icon>delete_outline</mat-icon>
+                </button>
+              </span>
+              <span class="tableButtons">
+                <button
+                  mat-flat-button
+                  color="primary"
+                  (click)="openModalEdit(user)"
+                >
+                  <mat-icon>create</mat-icon>
+                </button>
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</mat-card>
